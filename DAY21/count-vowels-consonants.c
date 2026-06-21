@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() 
+{
+    int i, vowels = 0, consonants = 0;
+    char str[100];
+
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for (i = 0; str[i] != '\0'; i++) 
+    {
+        if ((str[i] >= 'A' && str[i] <= 'Z') ||
+            (str[i] >= 'a' && str[i] <= 'z')) 
+        {
+
+            if (str[i] == 'A' || str[i] == 'E' || str[i] == 'I' ||
+                str[i] == 'O' || str[i] == 'U' || str[i] == 'a' ||
+                str[i] == 'e' || str[i] == 'i' || str[i] == 'o' ||
+                str[i] == 'u')
+                vowels++;
+            else
+                consonants++;
+        }
+    }
+
+    printf("Vowels = %d\n", vowels);
+    printf("Consonants = %d", consonants);
+
+    return 0;
+}
